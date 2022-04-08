@@ -1,0 +1,15 @@
+@mixin tablet-portrait-up () {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+@mixin decktop-portrait-up () {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+@mixin decktop () {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

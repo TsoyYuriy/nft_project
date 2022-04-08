@@ -1,0 +1,171 @@
+.promo{
+    background: #070444 url(../design/promo-bg-circle-left.png) no-repeat left top;
+    background-size: 50%;
+    padding: 45px 0;
+    &__title {
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #FFFFFF;
+        @include decktop-portrait-up { 
+            grid-area: title;
+            font-size: 55px;
+            line-height: 60px;
+            text-align: left;
+            margin-bottom: 33px;
+        }
+        @include decktop {
+            font-size: 96px;
+            line-height: 117px;
+        }
+    }
+    &__img-bg {
+        background: url(../design/promo-bg-circle-img.png) no-repeat center 30px;
+        background-size: cover;
+        margin-bottom: 55px;
+        text-align: center;
+        @include tablet-portrait-up {
+            background-size: 95%;
+            background-position-y: 70px;
+        }
+        @include decktop-portrait-up { 
+            grid-area: img;
+            background-size: 90%;
+            background-position-y: 40px;
+            align-self: end;
+        }
+    }
+    &__img {
+        width: 100%;
+        display: block;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        text-transform: lowercase;
+        text-align: center;
+        color: #FFFFFF;
+        margin: 0;
+        margin-bottom: 34px;
+        @include decktop-portrait-up { 
+            font-size: 19px;
+            line-height: 27px;
+            text-align: left;
+        }
+        @include decktop {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include decktop-portrait-up { 
+            grid-area: info;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+    &--wrap {
+        @include decktop-portrait-up {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-areas: "title  img"
+                                 "info   img";
+            
+        }
+    }
+}
+.timer {
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3 inset;
+    border: 2px solid #aac3d8;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    padding: 30px;
+    margin-bottom: 46px;
+    margin-right: auto;
+    @include decktop {
+        flex-basis: 60%;
+    }
+}
+.timer__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.date__text, 
+.date__number {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 40px;
+    text-transform: lowercase;
+    color: #FFFFFF;
+    &--utils {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: lowercase;
+        color: #FFFFFF;
+    }
+}
+.date__month {
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+    line-height: 40px;
+}
+.countdown {
+    display: flex;  
+    &__item {
+        color: white;
+        @include decktop-portrait-up {
+            color: white;
+            font-size: 50px;
+        }
+       
+    }
+}
+.counter-value {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 78px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    @include decktop-portrait-up {
+        margin-bottom: 0;
+        margin-right: 67px;
+    }
+    @include decktop {
+        font-size: 64px;
+        line-height: 78px;
+    }
+} 
+.btn-wailist {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 39px;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    border-radius: 60px;
+    color: #040344;
+    padding: 10px 32px;
+    display: inline-block;
+    @include decktop {
+        font-size: 32px;
+        line-height: 39px;
+        padding: 13px 37px;
+
+    }
+}

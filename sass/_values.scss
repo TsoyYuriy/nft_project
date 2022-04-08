@@ -1,0 +1,158 @@
+.values {
+    &__title {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 38px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 40px;
+        @include tablet-portrait-up {
+            text-align-last: left;
+        }
+        @include decktop-portrait-up {
+            font-size: 50px;
+            padding-top: 86px;
+        }
+        @include decktop {
+            font-size: 64px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+        text-transform: lowercase;
+        color: #FFFFFF;
+        padding-bottom: 59px;
+        @include decktop-portrait-up {
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 109px;
+        }
+        @include decktop {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+    &__aisultan {
+        background: url(../design/values__aisultan.png) no-repeat center;
+        background-size: cover;
+    }
+    &__nft-project {
+        background: url(../design/bg-nft-project.png) no-repeat center;
+        background-size: cover;
+        padding-top: 20px;
+    }
+}
+.value--bg-aisultan {
+    background: url(../design/bg-aisultan.png) no-repeat right bottom;
+    background-size: 56%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    @include tablet-portrait-up {
+        padding-top: 100px;
+        padding-bottom: 170px;
+        background-size: 54%;
+    }
+    @include decktop {
+        padding-top: 170px;
+    }
+}
+.value-info, 
+.nft-project-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet-portrait-up {
+        justify-content: flex-start;
+    }
+}
+.value__number, 
+.nft-project__number {
+    font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 74px;
+    color: #FFFFFF;
+    margin-right: 10px;
+    @include decktop-portrait-up {
+        font-size: 150px;
+        line-height: 90px;
+        margin-right: 32px;
+    }
+}
+.value__title,
+.nft-project__title {
+    font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #FFFFFF;
+    flex-basis: 80%;
+    @include tablet-portrait-up {
+        max-width: 280px;
+    }
+    @include decktop-portrait-up {
+        font-size: 53px;
+        line-height: 59px;
+        max-width: 520px;
+    }
+}
+.value__text,
+.nft-project__text {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+    max-width: 188px;
+    text-align: justify;
+    margin-bottom: 45px;
+    @include tablet-portrait-up {
+        max-width: 310px;
+    }
+    @include decktop-portrait-up {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 515px;
+
+    }
+}
+.nft-project__text {
+    max-width: 100%;
+}
+.more-span {
+    background: url(../design/bg-btn-more.svg) no-repeat center;
+    background-size: 150%;
+    width: 140px;
+    height: 32px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include decktop-portrait-up {
+        width: 240px;
+        font-size: 28px;
+        height: 60px;
+    }
+}
+.more-input {
+    display: none;
+}
+.card-deck {
+    display: flex;
+    margin-bottom: 40px;
+}
+.card-deck__img {
+    width: 111px;
+    height: 132px;
+    &:last-child {
+        display: none;
+    }
+}

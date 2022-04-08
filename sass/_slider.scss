@@ -1,0 +1,37 @@
+.slider {
+    margin-bottom: 92px;
+    &__title {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 38px;
+        text-transform: uppercase;
+        color: #000000;
+        text-align: center;
+        @include tablet-portrait-up {
+            text-align-last: left;
+        }
+        @include decktop-portrait-up {
+            font-size: 50px;
+        }
+        @include decktop {
+            font-size: 64px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+        text-transform: lowercase;
+        color: #000000;
+        @include decktop-portrait-up {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @include decktop {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+}
