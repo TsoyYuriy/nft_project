@@ -3,12 +3,12 @@
         @content;
     }
 }
-@mixin decktop-portrait-up () {
+@mixin sm-landscape-up () {
     @media screen and (min-width: 900px) {
         @content;
     }
 }
-@mixin decktop () {
+@mixin md-landscape-up () {
     @media screen and (min-width: 1200px) {
         @content;
     }

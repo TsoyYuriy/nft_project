@@ -254,7 +254,6 @@ body {
   display: flex;
   padding: 30px;
   margin-bottom: 46px;
-  margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
   .timer {
@@ -579,7 +578,32 @@ body {
 .values__nft-project {
   background: url(../design/bg-nft-project.png) no-repeat center;
   background-size: cover;
-  padding-top: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.values__land {
+  background: url(../design/bg-img-land.png) no-repeat center;
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 900px) {
+  .values-wrap__in {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .values-wrap__in {
+    align-items: center;
+  }
+}
+.values__tickets {
+  background: url(../design/bg-tickets.png) no-repeat center;
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 60px;
 }
 
 .value--bg-aisultan {
@@ -602,20 +626,39 @@ body {
 }
 
 .value-info,
-.nft-project-info {
+.nft-project-info,
+.land-info,
+.tickets-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (min-width: 600px) {
   .value-info,
-.nft-project-info {
+.nft-project-info,
+.land-info,
+.tickets-info {
     justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 900px) {
+  .value-info,
+.nft-project-info,
+.land-info,
+.tickets-info {
+    margin-bottom: 49px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .tickets-info {
+    justify-content: flex-end;
   }
 }
 
 .value__number,
-.nft-project__number {
+.nft-project__number,
+.tickets__number {
   font-family: "Bebas Neue", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 74px;
@@ -624,7 +667,8 @@ body {
 }
 @media screen and (min-width: 900px) {
   .value__number,
-.nft-project__number {
+.nft-project__number,
+.tickets__number {
     font-size: 150px;
     line-height: 90px;
     margin-right: 32px;
@@ -632,7 +676,8 @@ body {
 }
 
 .value__title,
-.nft-project__title {
+.nft-project__title,
+.tickets__title {
   font-family: "Bebas Neue", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -642,13 +687,15 @@ body {
 }
 @media screen and (min-width: 600px) {
   .value__title,
-.nft-project__title {
+.nft-project__title,
+.tickets__title {
     max-width: 280px;
   }
 }
 @media screen and (min-width: 900px) {
   .value__title,
-.nft-project__title {
+.nft-project__title,
+.tickets__title {
     font-size: 53px;
     line-height: 59px;
     max-width: 520px;
@@ -656,7 +703,8 @@ body {
 }
 
 .value__text,
-.nft-project__text {
+.nft-project__text,
+.tickets__text {
   font-weight: 300;
   font-size: 13px;
   line-height: 18px;
@@ -667,21 +715,35 @@ body {
 }
 @media screen and (min-width: 600px) {
   .value__text,
-.nft-project__text {
+.nft-project__text,
+.tickets__text {
     max-width: 310px;
   }
 }
 @media screen and (min-width: 900px) {
   .value__text,
-.nft-project__text {
+.nft-project__text,
+.tickets__text {
     font-size: 20px;
     line-height: 32px;
     max-width: 515px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .tickets__text {
+    margin-left: 6%;
+  }
+}
+
 .nft-project__text {
   max-width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .nft-project__text {
+    margin: 0;
+    flex-basis: 40%;
+  }
 }
 
 .more-span {
@@ -715,6 +777,23 @@ body {
   display: flex;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 600px) {
+  .card-deck {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card-deck {
+    justify-content: normal;
+    flex-basis: 30%;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-deck {
+    flex-basis: 40%;
+  }
+}
 
 .card-deck__img {
   width: 111px;
@@ -722,6 +801,190 @@ body {
 }
 .card-deck__img:last-child {
   display: none;
+}
+@media screen and (min-width: 600px) {
+  .card-deck__img:last-child {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-deck__img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nft-project--utilis {
+    margin-left: 52%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nft-project--utilis {
+    margin-left: 54%;
+  }
+}
+
+.more-block {
+  display: none;
+}
+.more-block__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .more-block__title {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+.more-block__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  list-style: none;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .more-block__text {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+.more-block__text--utils {
+  text-transform: uppercase;
+}
+.more-block__ul {
+  padding: 0;
+}
+.more-block--counter {
+  border: 1px solid #32B7B6;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  counter-increment: list-counter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+@media screen and (min-width: 600px) {
+  .more-block--counter {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 900px) {
+  .more-block--counter {
+    padding: 10px 40px;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .more-block--counter {
+    margin-bottom: 50px;
+    padding: 30px 50px;
+  }
+}
+.more-block--counter::before {
+  content: counter(list-counter);
+  font-weight: 400;
+  font-size: 28px;
+  border: 1px solid #A4C8E9;
+  padding: 12px 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  .more-block--counter::before {
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .more-block--counter::before {
+    font-size: 48px;
+    line-height: 59px;
+    padding: 12px 33px;
+  }
+}
+
+.btn-nft:checked ~ .nft-more__block {
+  display: block;
+}
+
+.btn-land:checked ~ .land-more__block {
+  display: block;
+}
+
+.land-info {
+  margin-bottom: 0;
+}
+
+.land-wrap__in,
+.tickets-wrap__in {
+  display: flex;
+  align-items: center;
+}
+
+.img-land,
+.img-tickets {
+  width: 60%;
+}
+
+.img-tickets {
+  margin-right: 10px;
+}
+@media screen and (min-width: 600px) {
+  .img-tickets {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .more-wrap__in {
+    display: flex;
+  }
+}
+
+.bg-tickets {
+  background: url(../upload/img-tickets.png) no-repeat left;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+}
+@media screen and (min-width: 1200px) {
+  .bg-tickets {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.tickets-wrap__in {
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 600px) {
+  .tickets-wrap__in {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tickets-wrap__in {
+    justify-content: flex-end;
+  }
+}
+
+.tickets-label--utilis {
+  margin-left: 55%;
 }
 
 /*# sourceMappingURL=style.css.map */

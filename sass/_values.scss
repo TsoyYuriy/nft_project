@@ -10,11 +10,11 @@
         @include tablet-portrait-up {
             text-align-last: left;
         }
-        @include decktop-portrait-up {
+        @include sm-landscape-up {
             font-size: 50px;
             padding-top: 86px;
         }
-        @include decktop {
+        @include md-landscape-up {
             font-size: 64px;
             line-height: 32px;
         }
@@ -27,12 +27,12 @@
         text-transform: lowercase;
         color: #FFFFFF;
         padding-bottom: 59px;
-        @include decktop-portrait-up {
+        @include sm-landscape-up {
             font-size: 20px;
             line-height: 30px;
             padding-bottom: 109px;
         }
-        @include decktop {
+        @include md-landscape-up {
             font-size: 26px;
             line-height: 32px;
         }
@@ -44,7 +44,30 @@
     &__nft-project {
         background: url(../design/bg-nft-project.png) no-repeat center;
         background-size: cover;
-        padding-top: 20px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    &__land {
+        background: url(../design/bg-img-land.png) no-repeat center;
+        background-size: cover;
+        padding-bottom: 40px;
+        padding-top: 60px;
+    }
+    &-wrap__in {
+        @include sm-landscape-up {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+        @include md-landscape-up {
+            align-items: center;
+        }
+    }
+    &__tickets {
+        background: url(../design/bg-tickets.png) no-repeat center;
+        background-size: cover;
+        padding-bottom: 40px;
+        padding-top: 60px;
     }
 }
 .value--bg-aisultan {
@@ -57,34 +80,46 @@
         padding-bottom: 170px;
         background-size: 54%;
     }
-    @include decktop {
+    @include md-landscape-up {
         padding-top: 170px;
     }
 }
 .value-info, 
-.nft-project-info {
+.nft-project-info,
+.land-info,
+.tickets-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include tablet-portrait-up {
         justify-content: flex-start;
     }
+    @include sm-landscape-up {
+        margin-bottom: 49px;
+    }
+}
+.tickets-info {
+    @include tablet-portrait-up {
+        justify-content: flex-end;
+    }
 }
 .value__number, 
-.nft-project__number {
+.nft-project__number,
+.tickets__number {
     font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
     font-size: 74px;
     color: #FFFFFF;
     margin-right: 10px;
-    @include decktop-portrait-up {
+    @include sm-landscape-up {
         font-size: 150px;
         line-height: 90px;
         margin-right: 32px;
     }
 }
 .value__title,
-.nft-project__title {
+.nft-project__title,
+.tickets__title {
     font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 700;
     font-size: 28px;
@@ -94,14 +129,15 @@
     @include tablet-portrait-up {
         max-width: 280px;
     }
-    @include decktop-portrait-up {
+    @include sm-landscape-up {
         font-size: 53px;
         line-height: 59px;
         max-width: 520px;
     }
 }
 .value__text,
-.nft-project__text {
+.nft-project__text,
+.tickets__text {
     font-weight: 300;
     font-size: 13px;
     line-height: 18px;
@@ -112,15 +148,23 @@
     @include tablet-portrait-up {
         max-width: 310px;
     }
-    @include decktop-portrait-up {
+    @include sm-landscape-up {
         font-size: 20px;
         line-height: 32px;
         max-width: 515px;
-
+    }
+}
+.tickets__text {
+    @include md-landscape-up {
+        margin-left: 6%;
     }
 }
 .nft-project__text {
     max-width: 100%;
+    @include sm-landscape-up {
+        margin: 0;
+        flex-basis: 40%;
+    }
 }
 .more-span {
     background: url(../design/bg-btn-more.svg) no-repeat center;
@@ -136,7 +180,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    @include decktop-portrait-up {
+    @include sm-landscape-up {
         width: 240px;
         font-size: 28px;
         height: 60px;
@@ -148,11 +192,170 @@
 .card-deck {
     display: flex;
     margin-bottom: 40px;
+    @include tablet-portrait-up {
+        justify-content: space-evenly;
+    }
+    @include sm-landscape-up {
+        justify-content: normal;
+        flex-basis: 30%;
+        flex-wrap: wrap;
+    }
+    @include md-landscape-up {
+        flex-basis: 40%;
+    }
 }
 .card-deck__img {
     width: 111px;
     height: 132px;
     &:last-child {
         display: none;
+        @include tablet-portrait-up {
+            display: inline-block;
+        }
     }
+    @include md-landscape-up {
+        width: 200px;
+        height: auto;
+    }
+}
+.nft-project--utilis {
+    @include sm-landscape-up {
+        margin-left: 52%;
+    }
+    @include md-landscape-up {
+        margin-left: 54%;
+
+    }
+}
+
+.more-block {
+    display: none;
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+        @include md-landscape-up {
+            font-size: 48px;
+            line-height: 59px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: lowercase;
+        color: #FFFFFF;
+        list-style: none;
+        margin-bottom: 40px;
+        @include md-landscape-up {
+            font-size: 32px;
+            line-height: 39px;
+        }
+        &--utils {
+            text-transform: uppercase;
+        }
+    }
+    &__ul {
+        padding: 0;
+    }
+    &--counter {
+        border: 1px solid #32B7B6;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        counter-increment: list-counter;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        @include tablet-portrait-up {
+            flex-wrap: nowrap;
+        }
+        @include sm-landscape-up {
+            padding: 10px 40px;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+        @include md-landscape-up {
+            margin-bottom: 50px;
+            padding: 30px 50px;
+        }
+        &::before {
+            content: counter(list-counter);
+            font-weight: 400;
+            font-size: 28px;
+            border: 1px solid #A4C8E9;
+            padding: 12px 16px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            @include tablet-portrait-up {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+            @include md-landscape-up {
+                font-size: 48px;
+                line-height: 59px;
+                padding: 12px 33px;
+
+            }
+        }
+    }
+    
+}
+.btn-nft:checked ~ .nft-more__block {
+    display: block;
+}
+.btn-land:checked ~ .land-more__block {
+    display: block;
+}
+.land-info {
+    margin-bottom: 0;
+}
+.land-wrap__in,
+.tickets-wrap__in {
+    display: flex;
+    align-items: center;
+}
+.img-land,
+.img-tickets {
+    width: 60%;
+}
+.img-tickets {
+    margin-right: 10px;
+    @include tablet-portrait-up {
+        display: none;
+    }
+}
+.more-wrap__in {
+    @include tablet-portrait-up {
+        display: flex;
+    }
+}
+.bg-tickets {
+    background: url(../upload/img-tickets.png) no-repeat left;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    @include md-landscape-up {
+        width: 600px;
+        height: 600px;
+    }
+}
+.tickets-wrap__in {
+    flex-direction: row-reverse;
+    @include tablet-portrait-up {
+        justify-content: space-around;
+    }
+    @include md-landscape-up {
+        justify-content: flex-end;
+    }
+}
+.tickets-label--utilis {
+    margin-left: 55%;
 }

@@ -10,10 +10,10 @@
         @include tablet-portrait-up {
             text-align-last: left;
         }
-        @include decktop-portrait-up {
+        @include sm-landscape-up {
             font-size: 50px;
         }
-        @include decktop {
+        @include md-landscape-up {
             font-size: 64px;
             line-height: 32px;
         }
@@ -25,11 +25,11 @@
         text-align: justify;
         text-transform: lowercase;
         color: #000000;
-        @include decktop-portrait-up {
+        @include sm-landscape-up {
             font-size: 20px;
             line-height: 30px;
         }
-        @include decktop {
+        @include md-landscape-up {
             font-size: 26px;
             line-height: 32px;
         }
