@@ -69,6 +69,18 @@
         padding-bottom: 40px;
         padding-top: 60px;
     }
+    &__whitelist {
+        background: url(../design/bg-whitelist.png) no-repeat center;
+        background-size: cover;
+        padding-bottom: 40px;
+        padding-top: 60px;
+    }
+    &__charity { 
+        background: url(../design/bg-charity.png) no-repeat center;
+        background-size: cover;
+        padding-bottom: 40px;
+        padding-top: 60px;
+    }
 }
 .value--bg-aisultan {
     background: url(../design/bg-aisultan.png) no-repeat right bottom;
@@ -87,7 +99,9 @@
 .value-info, 
 .nft-project-info,
 .land-info,
-.tickets-info {
+.tickets-info,
+.whitelist-info,
+.charity-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,10 +116,19 @@
     @include tablet-portrait-up {
         justify-content: flex-end;
     }
+    @include sm-landscape-up {
+        margin-bottom: 0;
+    }
+}
+.whitelist-info {
+    @include sm-landscape-up {
+        margin-bottom: 0;
+    }
 }
 .value__number, 
 .nft-project__number,
-.tickets__number {
+.tickets__number,
+.charity__number {
     font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
     font-size: 74px;
@@ -119,7 +142,8 @@
 }
 .value__title,
 .nft-project__title,
-.tickets__title {
+.tickets__title,
+.charity__title {
     font-family: 'Bebas Neue', Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 700;
     font-size: 28px;
@@ -137,7 +161,9 @@
 }
 .value__text,
 .nft-project__text,
-.tickets__text {
+.tickets__text,
+.whitelist__text,
+.charity__text {
     font-weight: 300;
     font-size: 13px;
     line-height: 18px;
@@ -309,10 +335,16 @@
     
 }
 .btn-nft:checked ~ .nft-more__block {
+    padding-top: 50px;
     display: block;
 }
 .btn-land:checked ~ .land-more__block {
+    padding-top: 50px;
     display: block;
+}
+.btn-charity:checked ~ .charity-more__block {
+    display: block;
+    padding-top: 50px;
 }
 .land-info {
     margin-bottom: 0;
@@ -323,7 +355,9 @@
     align-items: center;
 }
 .img-land,
-.img-tickets {
+.img-tickets,
+.img-whitelist,
+.img-charity {
     width: 60%;
 }
 .img-tickets {
@@ -332,22 +366,34 @@
         display: none;
     }
 }
+.img-whitelist {
+    margin-left: 10px;
+}
 .more-wrap__in {
     @include tablet-portrait-up {
         display: flex;
     }
 }
 .bg-tickets {
-    background: url(../upload/img-tickets.png) no-repeat left;
-    background-size: cover;
-    width: 250px;
-    height: 250px;
+    @include tablet-portrait-up {
+        background: url(../upload/img-tickets.png) no-repeat left;
+        background-size: cover;
+        width: 250px;
+        height: 250px;
+    }
+    @include sm-landscape-up {
+        width: 300px;
+        height: 300px;
+    }
     @include md-landscape-up {
         width: 600px;
         height: 600px;
     }
 }
-.tickets-wrap__in {
+.tickets-wrap__in, 
+.whitelist-wrap__in, 
+.charity-wrap__in {
+    display: flex;
     flex-direction: row-reverse;
     @include tablet-portrait-up {
         justify-content: space-around;
@@ -356,6 +402,34 @@
         justify-content: flex-end;
     }
 }
+.whitelist-wrap__in {
+    flex-direction: row;
+    align-items: center;
+}
 .tickets-label--utilis {
     margin-left: 55%;
+}
+.charity-wrap__in { 
+    margin-bottom: 30px;
+}
+.bg-charity {
+    @include tablet-portrait-up {
+        background: url(../design/charity-more-bg.png) no-repeat right;
+        background-size: 90%;
+    }
+    @include sm-landscape-up {
+        background-size: 68%;
+        align-items: center;
+        padding: 120px 0;
+    }
+    @include md-landscape-up {
+        padding: 190px 0;
+    }
+}
+.more-img-charity {
+    display: none;
+    @include tablet-portrait-up {
+        display: block;
+        width: 100%;
+    }
 }
