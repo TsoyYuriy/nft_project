@@ -1,0 +1,49 @@
+.footer {
+    background: #FFFFFF;
+    padding: 50px 0 0 0;
+    &-utils {
+        display: flex;
+        justify-content: space-between;
+        @include tablet-portrait-up {
+            // justify-content: space-around;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #030165;
+        margin-top: 0;
+        margin-bottom: 10px;
+        @include sm-landscape-up {
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+    &--twitter{
+        margin: 0;      
+    }
+    &__privat {
+        background:#040344;
+        text-align: center;
+    }
+}
+.privat__text {
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @include sm-landscape-up {
+        font-size: 32px;
+        line-height: 39px;
+    }
+}

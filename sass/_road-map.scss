@@ -1,0 +1,148 @@
+.road-map {
+    padding-bottom: 90px;
+    &__title {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @include tablet-portrait-up {
+            font-size: 43px;
+        }
+        @include sm-landscape-up {
+            font-size: 64px;
+            line-height: 78px;
+        }
+        &--utils {
+            font-size: 23px;
+            line-height: 32px;
+            @include tablet-portrait-up {
+                font-size: 33px;
+            }
+            @include sm-landscape-up {
+                font-size: 64px;
+                line-height: 78px;
+            }
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: lowercase;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+        margin-top: 0;
+        @include tablet-portrait-up {
+        line-height: 25px;
+        font-size: 16px;
+        }
+        @include sm-landscape-up {
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+    &--uppercase {
+        text-transform: uppercase;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__ul, 
+    &__images {
+        padding: 0;
+        margin: 0;
+    }
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        top: 50px;
+        @include phone-portrait-up {
+            top: 70px;
+        }
+        @include tablet-portrait-up {
+            top: -40px;
+        }
+        @include sm-landscape-up {  
+            top: 10px;
+        }
+        @include md-landscape-up {
+            justify-content: space-around;
+        }
+    }
+    &__images {
+        background: url(../design/bg-road-map.png) no-repeat 80% 72%;
+        background-size: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        @include phone-portrait-up {
+            background-size: 45%;
+            background-position-y: 88%;
+        }
+        @include tablet-portrait-up {
+            background-size: 50%;
+            background-position-y: 26%;
+            background-position-x: 86%;
+            align-items: center;
+        }
+        @include sm-landscape-up {
+            background-size: 53%;
+            align-items: flex-start;
+        }
+        @include md-landscape-up {
+            background-size: 37%;
+            background-position-y: 65%;
+            background-position-x: 80%;
+            align-items: center;
+
+        }
+    }
+    &__li {
+        list-style: none;
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            content: "";
+            background: linear-gradient(180deg, #AA0DAD 0%, #E5E5E5 100%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 46px;
+            @include tablet-portrait-up {
+                top: 55px;
+            }
+            @include sm-landscape-up {
+                width: 23px;
+                height: 23px;
+                top: 103px;
+                left: -16px;
+            }
+        }
+    }
+    &__li-img {
+        list-style: none;
+        @include tablet-portrait-up {
+            margin-bottom: 150px;
+        }
+    }
+    &__img {
+        width: 55%;
+        display: block;
+        @include tablet-portrait-up {
+            width: 150px;
+            height: auto;
+        }
+        @include sm-landscape-up {
+            width: 250px;
+        }
+    }
+}
+.road-map__title--utils {
+    margin-bottom: 10px;
+}
